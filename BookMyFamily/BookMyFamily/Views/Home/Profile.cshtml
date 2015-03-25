@@ -2,6 +2,25 @@
 @{
     ViewBag.Title = "Profile";
 }
-
-<h2>Profile</h2>
+<style>
+   div:hover #profile_hover {
+    display:block;
+}
+#profile_hover:focus {
+    display:block;
+}
+#profile_hover {
+    display:none;
+}
+    #profile_hover {
+        border:1px solid black;
+        width:50px;
+        height:50px;
+    }
+</style>
+<div>
+    
+    <img src="~/Content/img/family.jpg" />
+    <div id="profile_hover"></div>
+</div>
 
