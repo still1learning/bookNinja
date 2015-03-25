@@ -26,5 +26,10 @@ namespace BookMyFamily.Controllers
 
             return View();
         }
+
+        public ActionResult LogIn()
+        {
+            return View();
+        }
     }
 }
