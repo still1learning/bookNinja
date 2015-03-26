@@ -1,7 +1,91 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Profile";
 }
+<style>
+    #wrapper {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
 
-<h2>Profile</h2>
+    #profile_image img {
+        -webkit-transition: 2s;
+    }
 
+        #profile_image img.clicked {
+            margin-left: 500px;
+        }
+
+    #profile_hover.float_div {
+        margin-right: 700px;
+    }
+
+    #profile_hover.float_div {
+        -webkit-transition: 10s;
+    }
+
+    #profile_image {
+        margin-left: 350px;
+        width: 100px;
+        position: relative;
+        cursor: pointer;
+        margin-top: 50px;
+    }
+
+    #profile_hover {
+        border-right: 1px solid black;
+        width: 50%;
+        display: none;
+        position: relative;
+        left: 0%;
+        -moz-animation: slide 1s ease 3.5s forwards;
+        -webkit-animation: slide 1s ease 3.5s forwards;
+        -o-animation: slide 1s ease 3.5s forwards;
+        -ms-animation: slide 1s ease 3.5s forwards;
+        animation: slide 1s ease 3.5s forwards;
+        background-color: #0094ff;
+        text-align: center;
+        padding: 50px;
+        height: 100%;
+    }
+
+    #hidden_wrapper {
+        position: fixed;
+        top: 200px;
+        left: 0px;
+        width: 100%;
+    }
+</style>
+<div id="wrapper">
+    <div id="hidden_wrapper">
+
+        <div id="profile_hover">
+            Full Name:<span id="fullname"></span><br />
+            Education:<span id="profile_edu"></span><br />
+            Working Experience<span id="profile_work"></span><br />
+            Address<span id="prfile_address"></span><br />
+            <span>Gallery</span>
+        </div>
+    </div>
+    <div id="profile_image">
+        <img src="~/Content/img/family.jpg" />
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
+    $('#profile_image img').on('click', function () {
+        $(this).toggleClass('clicked');
+        if ($("#profile_hover").css("display") == "none") {
+            $("#profile_hover").toggle(1500);
+        }
+        else if 
+           ($("#profile_hover").css("display") == "block") {
+            $("#profile_hover").fadeToggle('slow');
+
+        }
+        else {
+            $("#profile_hover").css("display", "none");
+
+        }
+    });
+</script>
