@@ -2,6 +2,11 @@
     ViewBag.Title = "Profile";
 }
 <style>
+    #wrapper {
+        width:100%;
+        height:100%;
+        margin:0 auto;
+    }
     #profile_image img {
         -webkit-transition: 2s;
     }
@@ -26,53 +31,53 @@
     }
 
     #profile_hover {
-        /*border: 1px solid black;
-        display:none;
-        background-color:gray;
-        position:relative;
-        width:35%;
-         margin-right: 350px;
-        min-height:400px;
-        text-align:center;*/
-        height: 0;
+       border-right:1px solid black;
+        width: 50%;
         display: none;
-        background: red;
+        position: relative;
+        left: 0%;
         -moz-animation: slide 1s ease 3.5s forwards;
         -webkit-animation: slide 1s ease 3.5s forwards;
         -o-animation: slide 1s ease 3.5s forwards;
         -ms-animation: slide 1s ease 3.5s forwards;
         animation: slide 1s ease 3.5s forwards;
-    }
-
-
-
-    /*#wrapper {
-        width:100%;
+        background-color:#0094ff;
+        text-align:center;
+        padding:50px;
         height:100%;
-        margin:0 auto;
-    }*/
+    }
+#hidden_wrapper {
+        position: fixed;
+        top: 200px;
+        left: 0px;
+        width: 100%;
+}
 </style>
+<div id="wrapper">
+    <div id="hidden_wrapper">
 
-<div id="profile_image">
-    <img src="~/Content/img/family.jpg" />
-
-</div>
-<div id="profile_hover">
-    Full Name:<span id="fullname"></span><br />
-    Education:<span id="profile_edu"></span><br />
-    Working Experience<span id="profile_work"></span><br />
-    Address<span id="prfile_address"></span><br />
-    <span>Gallery</span>
+        <div id="profile_hover">
+            Full Name:<span id="fullname"></span><br />
+            Education:<span id="profile_edu"></span><br />
+            Working Experience<span id="profile_work"></span><br />
+            Address<span id="prfile_address"></span><br />
+            <span>Gallery</span>
+        </div>
+    </div>
+    <div id="profile_image">
+        <img src="~/Content/img/family.jpg" />
+    </div>
 </div>
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 <script>
     $('#profile_image img').on('click', function () {
         $(this).toggleClass('clicked');
         if ($("#profile_hover").css("display") == "none") {
-            $("#profile_hover").toggleClass('clicked').fadeIn(1000);
+            $("#profile_hover").toggle(1500);
         }
         else {
             $("#profile_hover").css("display", "none");
+
         }
     });
 </script>
