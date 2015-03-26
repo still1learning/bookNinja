@@ -1,26 +1,53 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Profile";
 }
 <style>
-   div:hover #profile_hover {
-    display:block;
-}
-#profile_hover:focus {
-    display:block;
-}
-#profile_hover {
-    display:none;
-}
+    #profile_image img {
+        -webkit-transition: 3s;
+    }
+
+        #profile_image img.clicked {
+            margin-left: 500px;
+        }
+
+    #profile_hover.float_div {
+        margin-left: 100px;
+    }
+
+    #profile_hover.float_div {
+        -webkit-transition: 3s;
+    }
+
+    #profile_image {
+        margin: 0 auto;
+        width: 100px;
+        height: 70px;
+    }
+
     #profile_hover {
-        border:1px solid black;
-        width:50px;
-        height:50px;
+        border: 1px solid black;
+        width: 100px;
+        height: 70px;
+        display:none;
     }
 </style>
-<div>
-    
+<div id="profile_image">
     <img src="~/Content/img/family.jpg" />
-    <div id="profile_hover"></div>
-</div>
 
+</div>
+<div id="profile_hover"></div>
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
+    $('#profile_image img').on('click', function () {
+        $(this).toggleClass('clicked');
+        if ($("#profile_hover").css("display") == "none") {
+            $("#profile_hover").css("display", "inline-block");
+            $("#profile_hover").toggleClass('float_div');
+        }
+        else {
+            $("#profile_hover").css("display", "none");
+        }
+    });
+</script>
