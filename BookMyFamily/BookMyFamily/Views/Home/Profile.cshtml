@@ -3,7 +3,7 @@
 }
 <style>
     #profile_image img {
-        -webkit-transition: 3s;
+        -webkit-transition: 2s;
     }
 
         #profile_image img.clicked {
@@ -11,40 +11,65 @@
         }
 
     #profile_hover.float_div {
-        margin-right: 500px;
+        margin-right: 700px;
     }
 
     #profile_hover.float_div {
-        -webkit-transition: 3s;
+        -webkit-transition: 10s;
     }
 
     #profile_image {
         margin-left: 350px;
         width: 100px;
         height: 70px;
-        position:absolute;
-        float:right;
+        position: relative;
     }
 
     #profile_hover {
-        border: 1px solid black;
+        /*border: 1px solid black;
         display:none;
+        background-color:gray;
+        position:relative;
+        width:35%;
+         margin-right: 350px;
+        min-height:400px;
+        text-align:center;*/
+        height: 0;
+        display: none;
+        background: red;
+        -moz-animation: slide 1s ease 3.5s forwards;
+        -webkit-animation: slide 1s ease 3.5s forwards;
+        -o-animation: slide 1s ease 3.5s forwards;
+        -ms-animation: slide 1s ease 3.5s forwards;
+        animation: slide 1s ease 3.5s forwards;
     }
+
+
+
+    /*#wrapper {
+        width:100%;
+        height:100%;
+        margin:0 auto;
+    }*/
 </style>
+
 <div id="profile_image">
     <img src="~/Content/img/family.jpg" />
 
 </div>
-<div id="profile_hover"></div>
-
-
+<div id="profile_hover">
+    Full Name:<span id="fullname"></span><br />
+    Education:<span id="profile_edu"></span><br />
+    Working Experience<span id="profile_work"></span><br />
+    Address<span id="prfile_address"></span><br />
+    <span>Gallery</span>
+</div>
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 <script>
     $('#profile_image img').on('click', function () {
         $(this).toggleClass('clicked');
         if ($("#profile_hover").css("display") == "none") {
-            $("#profile_hover").css("display", "inline-block");
-            $("#profile_hover").toggleClass('float_div');
+            $("#profile_hover").toggleClass('clicked').fadeIn(1000);
         }
         else {
             $("#profile_hover").css("display", "none");
