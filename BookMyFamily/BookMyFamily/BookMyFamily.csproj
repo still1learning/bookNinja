@@ -159,6 +159,7 @@
     <Content Include="Views\Account\LogIn.cshtml" />
     <Content Include="Views\Account\LogOut.cshtml" />
     <Content Include="Views\Account\Preview.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
