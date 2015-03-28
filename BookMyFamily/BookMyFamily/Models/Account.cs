@@ -14,6 +14,9 @@ namespace BookMyFamily.Models
 
         public Account()
         {
+            this.Username = "";
+            this.Password = "";
+                this.User = new User();
             this.Exists = false;
         }
 

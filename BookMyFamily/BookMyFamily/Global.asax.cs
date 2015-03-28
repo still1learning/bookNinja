@@ -22,6 +22,9 @@ namespace BookMyFamily
             //test cases for deletition later
             AccountController.Current = new Account("darko", "ninja", new User("darko", "Kotoski", DateTime.Now, "skopje"));
             AuthenticationModule.AddAccount(AccountController.Current);
+
+            AccountController.Current = new Account("kristijan", "ninja", new User("kristijan", "arsovski", DateTime.Now, "skopje"));
+            AuthenticationModule.AddAccount(AccountController.Current);
         }
     }
 }

@@ -14,6 +14,14 @@ namespace BookMyFamily.Models
         public List<User> Parents { get; set; }
         public List<User> Children { get; set; }
 
+        public User()
+        {
+            this.Name = "";
+            this.Surname = "";
+            this.Born = DateTime.Now;
+            this.Location = "";
+        }
+
         public User(string Name, string Surname, DateTime Born, string Location)
         {
             this.Name = Name;

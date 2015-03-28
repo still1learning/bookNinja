@@ -38,6 +38,7 @@ namespace BookMyFamily.Controllers
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
+            Current = new Account();
             return View();
         }
 
