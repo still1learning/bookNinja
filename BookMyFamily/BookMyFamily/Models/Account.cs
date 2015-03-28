@@ -17,7 +17,7 @@ namespace BookMyFamily.Models
             this.Exists = false;
         }
 
-        public Account(string Username, string Password, User User, bool exists)
+        public Account(string Username, string Password, User User)
         {
             this.Username = Username;
             this.Password = Password;

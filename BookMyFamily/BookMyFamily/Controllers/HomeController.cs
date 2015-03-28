@@ -30,7 +30,7 @@ namespace BookMyFamily.Controllers
         
         public ActionResult Profile()
         {
-            return View(); 
+            return View(AccountController.Current); 
         }
     }
 }

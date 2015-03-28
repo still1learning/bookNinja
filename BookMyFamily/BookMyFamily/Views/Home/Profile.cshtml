@@ -1,6 +1,10 @@
-﻿@{
+﻿@model BookMyFamily.Models.Account
+
+@{
     ViewBag.Title = "Profile";
 }
+
+
 <style>
     #wrapper {
         width: 100%;
@@ -66,10 +70,10 @@
     <div id="hidden_wrapper">
 
         <div id="profile_hover">
-            Full Name:<span id="fullname"></span><br />
+            Full Name:<span id="fullname">@Model.User.Name</span><br />
             Education:<span id="profile_edu"></span><br />
-            Working Experience<span id="profile_work"></span><br />
-            Address<span id="prfile_address"></span><br />
+            Working Experience: <span id="profile_work"></span><br />
+            Address: <span id="prfile_address">@Model.User.Location</span><br />
             <span>Gallery</span>
         </div>
     </div>

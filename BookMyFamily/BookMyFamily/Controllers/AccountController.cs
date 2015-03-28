@@ -11,7 +11,7 @@ namespace BookMyFamily.Controllers
     public class AccountController : Controller
     {
 
-        public Account Current { get; set; }
+        public static Account Current { get; set; }
         //
         // GET: /Account/
 
