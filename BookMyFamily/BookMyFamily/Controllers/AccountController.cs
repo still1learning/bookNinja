@@ -28,8 +28,9 @@ namespace BookMyFamily.Controllers
             {
                 Current = AuthenticationModule.GetAccount(username);
                 FormsAuthentication.SetAuthCookie(username, true);
+                return View();
             }
-            return View();
+            return Redirect("~/");
         }
 
 
