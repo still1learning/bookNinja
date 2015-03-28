@@ -15,12 +15,18 @@ namespace BookMyFamily.Controllers
         //
         // GET: /Account/
 
+     
+        public ActionResult LogIn()
+        {            
+            return View();
+        }
+        
         [HttpPost]
-        public ActionResult LogIn(string username,string password)
+        public ActionResult Authenticate(string username, string password)
         {
             if (AuthenticationModule.CheckAccount(username, password))
             {
-                Current=AuthenticationModule.GetAccount(username);
+                Current = AuthenticationModule.GetAccount(username);
                 FormsAuthentication.SetAuthCookie(username, true);
             }
             return View();
@@ -34,6 +40,7 @@ namespace BookMyFamily.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Preview()
         {
             return View(Current);
