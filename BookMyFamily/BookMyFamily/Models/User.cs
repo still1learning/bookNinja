@@ -7,8 +7,21 @@ namespace BookMyFamily.Models
 {
     public class User
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+            set
+            {
+                var tmp = value.Split(' ');
+                FirstName = tmp[0];
+                LastName = tmp[1];
+            }
+        }
         public DateTime Born { get; set; }
         public string Location { get; set; }
         public List<User> Parents { get; set; }
@@ -16,16 +29,16 @@ namespace BookMyFamily.Models
 
         public User()
         {
-            this.Name = "";
-            this.Surname = "";
+            this.FirstName = "";
+            this.LastName = "";
             this.Born = DateTime.Now;
             this.Location = "";
         }
 
         public User(string Name, string Surname, DateTime Born, string Location)
         {
-            this.Name = Name;
-            this.Surname = Surname;
+            this.FirstName = Name;
+            this.LastName = Surname;
             this.Born = Born;
             this.Location = Location;
         }

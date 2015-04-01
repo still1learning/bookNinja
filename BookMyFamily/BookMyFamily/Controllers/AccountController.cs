@@ -52,5 +52,13 @@ namespace BookMyFamily.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult MakeAcount(string email, string password, string passwordC, string twitter, string facebook, string google, string img, HttpPostedFileBase theImg, string name, string lastname, string phone, string address)
+        {
+            Account tmp = new Account(email, password, new User(name, lastname, DateTime.Now, address));
+            AuthenticationModule.AddAccount(tmp);
+            return Redirect("~/Account/Preview");
+        }
 	}
 }
