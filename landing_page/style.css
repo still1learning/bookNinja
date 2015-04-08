@@ -86,7 +86,7 @@ body{
 	z-index:10;
   background: rgba(0,0,0,0.7);
  
-  max-width: 320px;
+  max-width: 30%;
   margin: 0 auto;
   padding: 20px 16px 40px 16px;
   text-align: center;
@@ -217,10 +217,11 @@ body{
 }
 
 .btn {
+	width: 100%;
   border: 0;
   background-color: #696a6b;
-  padding: 18px 30px 18px 30px;
-  font-size: 18px;
+  padding: 1% 5% 1% 5%;
+  font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: .0875em;
   font-weight: 500;
