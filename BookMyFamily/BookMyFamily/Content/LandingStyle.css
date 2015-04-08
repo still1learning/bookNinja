@@ -1,6 +1,22 @@
 /* CSS for slider */
 body{
   font-family: "futura", arial;
+  padding: 0;
+  margin: 0;
+}
+
+header{
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	background-color: black;
+	background: rgba(0,0,0,0.7);
+	color: white;
+}
+
+#wrapper{
+	margin: 0 auto;
+	width: 100%;
 }
 
 .fader{
