@@ -127,6 +127,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\family.jpg" />
     <Content Include="Content\img\icon.png" />
+    <Content Include="Content\LandingStyle.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -147,6 +148,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\sliderScript.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -169,6 +171,7 @@
     <Content Include="Views\Account\Preview.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Authenticate.cshtml" />
+    <Content Include="Views\Shared\LayoutLanding.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
