@@ -75,7 +75,7 @@ function DrawTree(current, x, y) {
     
     if(!!current.children){
        var start = 60*(current.children.length*2 -1)/2;
-        for (var i = 0; i < current.children.length; i++) {
+        for (var i = 0; i < current.children.length; i++) { 
             DrawTree(current.children[i], x - start +i*150, y + 100);
         }
     }
