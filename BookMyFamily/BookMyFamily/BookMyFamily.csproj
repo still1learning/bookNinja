@@ -173,11 +173,8 @@
     <Content Include="Views\Account\Preview.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Authenticate.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Home\TreeView.cshtml" />
-=======
->>>>>>> parent of 945a2a4... Button fix
-    <Content Include="Views\Shared\LayoutLanding.cshtml" />
+    <Content Include="Views\Shared\_LandingLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
