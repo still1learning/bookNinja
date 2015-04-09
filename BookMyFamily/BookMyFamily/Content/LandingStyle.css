@@ -285,3 +285,9 @@ header{
     transform: translate3d(0, 0, 0);
   }
 }
+#logBtn {
+    width:10%;
+    position:absolute;
+    top:20%;
+    right:5%;
+}
