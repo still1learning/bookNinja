@@ -1,4 +1,4 @@
-/* CSS for slider */
+﻿/* CSS for slider */
 body{
   font-family: "futura", arial;
   padding: 0;
@@ -233,10 +233,10 @@ header{
 }
 
 .btn {
-	width: 100%;
+	width: 80%;
   border: 0;
   background-color: #696a6b;
-  padding: 1% 5% 1% 5%;
+  padding: 5% 3% 5% 3%;
   font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: .0875em;
