@@ -27,7 +27,13 @@ namespace BookMyFamily.Controllers
             return View();
         }
 
-        public ActionResult LogIn()
+        
+        public ActionResult Profile()
+        {
+            return View(AccountController.Current); 
+        }
+
+        public ActionResult TreeView()
         {
             return View();
         }

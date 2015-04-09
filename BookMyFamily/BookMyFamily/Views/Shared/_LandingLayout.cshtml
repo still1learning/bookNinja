@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/LandingStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+    <div class="container body-content">
+        @RenderBody()
+
+
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/sliderScript.js"></script>
+    <script>
+        var $input = $('.form-fieldset > input');
+
+        $input.blur(function (e) {
+            $(this).toggleClass('filled', !!$(this).val());
+        });
+    </script>
+</body>
+</html>
