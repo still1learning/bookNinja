@@ -32,5 +32,10 @@ namespace BookMyFamily.Controllers
         {
             return View(AccountController.Current); 
         }
+
+        public ActionResult TreeView()
+        {
+            return View();
+        }
     }
 }
