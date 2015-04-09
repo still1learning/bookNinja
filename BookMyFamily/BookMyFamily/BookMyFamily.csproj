@@ -127,7 +127,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\family.jpg" />
     <Content Include="Content\img\icon.png" />
-    <Content Include="Content\LandingStyle.css" />
+    <Content Include="Content\LandingSyle.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -171,7 +171,7 @@
     <Content Include="Views\Account\Preview.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Authenticate.cshtml" />
-    <Content Include="Views\Shared\LayoutLanding.cshtml" />
+    <Content Include="Views\Shared\LandingLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
